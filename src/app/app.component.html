@@ -4,7 +4,8 @@
           <a class="navbar-item">
             MyCompany
           </a>
-          <div class="navbar-burger">
+          <!-- toggle is a variable and [ngClass] makes reference to an style class, "is-active" is from Bulma -->
+          <div class="navbar-burger" (click)="toggle = !toggle" [ngClass]="{'is-active': toggle}">
             <span></span>
             <span></span>
             <span></span>
@@ -13,10 +14,10 @@
 
     <div class="navbar-menu">
       <div class="navbar-end">
-          <a class="navbar-item r-item">Home</a>
+          <a routerLink="/" class="navbar-item r-item">Home</a>
           <a class="navbar-item r-item">Features</a>
           <a class="navbar-item r-item">About</a>
-          <a class="navbar-item r-item">FAQ</a>
+          <a routerLink="/faq" class="navbar-item r-item">FAQ</a>
           
           <div class="navbar-item">
             <a class="button is-primary is-outlined">
@@ -30,5 +31,8 @@
     </div>
   </div>
 </div>
-
+<!-- ################################## ↑NAVBAR↑ ############################# -->
 <router-outlet></router-outlet>
+<!-- ################################## ↓FOOTER↓ ############################# -->
+
+
