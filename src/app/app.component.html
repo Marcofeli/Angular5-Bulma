@@ -5,14 +5,15 @@
             MyCompany
           </a>
           <!-- toggle is a variable and [ngClass] makes reference to an style class, "is-active" is from Bulma -->
-          <div class="navbar-burger" (click)="toggle = !toggle" [ngClass]="{'is-active': toggle}">
+          <span class="navbar-burger" (click)="toggleNavbar = !toggleNavbar;" [ngClass]="{'is-active': toggleNavbar}">
             <span></span>
             <span></span>
             <span></span>
-          </div>
+          </span>
+
         </div>
 
-    <div class="navbar-menu">
+    <div class="navbar-menu" [ngClass]="{'is-active': toggleNavbar}">
       <div class="navbar-end">
           <a routerLink="/" class="navbar-item r-item">Home</a>
           <a class="navbar-item r-item">Features</a>
