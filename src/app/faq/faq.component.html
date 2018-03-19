@@ -1,3 +1,17 @@
-<p>
-  faq works!
-</p>
+<div class="container">
+  <section class="section">
+    <h1 class="tittle">FAQ</h1>
+    <h2 class="subtitle is-4">Lorem ipsum and all of that jazz.</h2>
+    <div class="columns">
+      <!-- Faqs is gonna be the first 10 or just an empty array -->
+      <div class="column is-one-third" *ngFor="let faq of (faqs ? faqs.slice(0,10):[])">
+        <div class="card">
+          <div class="card-content">
+            <p class="title">{{faq.title}}</p>
+            <p class="answer">{{faq.body}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
